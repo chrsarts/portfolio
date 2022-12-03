@@ -13,7 +13,7 @@ body {
   background-color: black;
   color: white;
 }
-
+/* nav and nav animations */
 nav {
   padding-top: 50px;
   width: 100vw;
@@ -66,7 +66,6 @@ nav {
 
 .nav-brand:hover::after {
   transform: translate(25%, -110%);
-
   opacity: 1;
 }
 
@@ -104,4 +103,136 @@ nav {
 
 .nav-link:hover::before {
   width: 100%;
+}
+
+.section-padding {
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-weight: 300;
+  font-size: 5em;
+}
+
+.hero h1:nth-child(2) {
+  color: red;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  transition: all 0.3s ease;
+}
+
+.links a {
+  color: red;
+  text-decoration: none;
+}
+
+.link .linked-in {
+  color: white;
+}
+
+.links .link:hover {
+  transform: translate(0, -10px);
+}
+
+.projects h1 {
+  margin-bottom: 50px;
+}
+
+.projects .card {
+  border: 2px dashed white;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 50px;
+  height: 300px;
+  margin: 15px 0;
+}
+
+.card .title h3 {
+  color: red;
+  font-weight: 300;
+}
+
+.card .desc {
+  height: 100px;
+}
+
+.card i {
+  color: red;
+}
+
+.skills h1 {
+  letter-spacing: 3px;
+}
+
+.skills .card {
+  background: transparent;
+}
+
+.email-me {
+  padding-bottom: 100px;
+}
+
+.email-me button {
+  background-color: transparent;
+  color: red;
+  padding: 10px;
+  border: 2px solid red;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.email-me button:hover {
+  color: white;
+}
+
+.email-me button::before {
+  content: "";
+  position: absolute;
+  display: inline;
+  height: 100%;
+  width: 0%;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+  background-color: red;
+}
+
+.email-me button:hover::before {
+  width: 100%;
+}
+
+.email h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.email.hide {
+  transform: translate(0, 10px);
+  opacity: 0;
+}
+
+.email {
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  .name h1 {
+    font-size: 2em;
+  }
 }
